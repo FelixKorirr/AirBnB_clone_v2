@@ -9,6 +9,7 @@ import models
 
 Base = declarative_base()
 
+
 class BaseModel:
     """A base class for all hbnb models"""
     id = Column(String(60), unique=True, nullable=False, primary_key=True)
@@ -54,7 +55,7 @@ class BaseModel:
         if '_sa_instance_state' in dictionary.keys():
             del dictionary['_sa_instance_state']
         return dictionary
-    
+
     def delete(self):
         """ delete object
         """
